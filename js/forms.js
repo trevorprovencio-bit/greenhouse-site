@@ -23,6 +23,8 @@
   }
   document.querySelectorAll("form[data-form]").forEach(function(form){
     var kind = KINDS[form.getAttribute("data-form")]; if (!kind) return;
+    // The status line exists (empty) from the start, so screen readers announce it when it fills in
+    if (!form.querySelector(".gh-form-status")){ var live = document.createElement("p"); live.className = "gh-form-status"; live.setAttribute("role", "status"); form.appendChild(live); }
     form.addEventListener("submit", function(e){
       e.preventDefault();
       var v = {}, fields = form.querySelectorAll("input, textarea, select"), firstBad = null, missing = [];
