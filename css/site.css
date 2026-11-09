@@ -3,9 +3,28 @@
 body{margin:0}
 html{scroll-behavior:smooth}
 @media (prefers-reduced-motion: reduce){html{scroll-behavior:auto}}
-@media (max-width: 900px){.gh-nav{display:none !important}.gh-menu{display:inline-flex !important}}
+@media (max-width: 900px){.gh-nav{display:none !important}.gh-menu{display:block !important}.gh-mbar{display:flex !important}}
 a{color:#1C4A46}a:hover{color:#393536}
 @keyframes gh-ticker{from{transform:translateX(0)}to{transform:translateX(-50%)}}
 .gh-ticker-track{animation:gh-ticker 40s linear infinite}
 .gh-ticker:hover .gh-ticker-track{animation-play-state:paused}
 @media (prefers-reduced-motion: reduce){.gh-ticker-track{animation:none}}
+
+/* Shared details */
+h1,h2,h3{text-wrap:balance}p,blockquote{text-wrap:pretty}
+::selection{background:#7FCB2B;color:#393536}
+a:focus-visible,button:focus-visible,summary:focus-visible,input:focus-visible,textarea:focus-visible,select:focus-visible{outline:2px solid #F03B1F;outline-offset:3px}
+.gh-dark a:focus-visible,.gh-dark summary:focus-visible,footer a:focus-visible{outline-color:#7FCB2B}
+img{max-width:100%}
+
+/* Phone menu and sticky bottom bar (every page) */
+.gh-menu summary{list-style:none}.gh-menu summary::-webkit-details-marker{display:none}
+.gh-menu[open] .gh-menu-panel{display:flex !important}
+.gh-mbar a{flex:1 1 0}
+
+/* Artist cards: two across on phones */
+@media (max-width: 640px){
+  .gh-artists{grid-template-columns:repeat(2,minmax(0,1fr)) !important;gap:40px 14px !important}
+  .gh-artists h3{font-size:22px !important}
+  .gh-artists a[data-book],.gh-artists a[target]{white-space:normal !important;text-align:center;padding:8px 10px !important;line-height:1.3;width:100%;letter-spacing:.1em !important}
+}

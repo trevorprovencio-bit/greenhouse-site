@@ -30,4 +30,4 @@ npx serve .
 | `book.html` | Book and contact |
 | `book-online.html` | Book online (Vagaro) |
 
-Shared styles are in `css/site.css`. Logos and merch are in `images/`, and photos are in `images/photos/`.
+Shared styles are in `css/site.css`. The booking panel that opens from every Book button is `js/booking.js` with `css/booking.css`; see `CLAUDE.md` for how to point tattoo requests at a form service. Logos and merch are in `images/`, and photos are in `images/photos/`.
