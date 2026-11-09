@@ -1,0 +1,11 @@
+/* Shared styles for every Greenhouse page. Most layout is still inline from the design comps. */
+*{box-sizing:border-box}
+body{margin:0}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion: reduce){html{scroll-behavior:auto}}
+@media (max-width: 900px){.gh-nav{display:none !important}.gh-menu{display:inline-flex !important}}
+a{color:#1C4A46}a:hover{color:#393536}
+@keyframes gh-ticker{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+.gh-ticker-track{animation:gh-ticker 40s linear infinite}
+.gh-ticker:hover .gh-ticker-track{animation-play-state:paused}
+@media (prefers-reduced-motion: reduce){.gh-ticker-track{animation:none}}
