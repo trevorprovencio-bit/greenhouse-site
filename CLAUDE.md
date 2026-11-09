@@ -42,12 +42,20 @@ A static site, with no framework and no build step. The pages came from design c
   - Paste a form endpoint that accepts JSON, such as Formspree, and requests post there instead and show "Request sent".
 - The panel is styled under `.ghb`, so page styles don't leak into it.
 
+## Forms (`js/forms.js`)
+- The contact form (`book.html`), the guest-spot form and the newsletter sign-up (`art.html`) all check their required fields and show a status line.
+- **Where they go:** with no backend yet, they open the visitor's email app addressed to info@greenhouseavl.com. Set `FORM_ENDPOINT` to post to a form service instead.
+
+## Buttons
+- Every button carries `gh-btn` plus a variant: `--primary`, `--outline`, `--outline-light` or `--lime`. Hover and press states live in `css/site.css`.
+- Use the same classes on new buttons.
+
 ## Where the links came from
 - Artist Instagram and booking links were taken from greenhouseavl.com (the current site) on Nov 8, 2026.
 - The Academy "Reserve a spot" buttons point to the class product pages on the current site. They will break when that site is replaced, unless class sign-up moves somewhere else.
 
 ## Links still missing (left as `href="#"`)
-- **Sam's Instagram:** the current site splits the link between @doeshairforfood and @macktomrell. Confirm with Sam.
+- **Sam's Instagram:** the current site splits the link between @doeshairforfood and @macktomrell. Until Sam confirms, his Instagram icon (homepage) and "See Sam's work" link (hair page) are left out.
 
 ## Waiting on Dre and Chuck (don't guess these)
 - Walk-in policy, separately for hair and for tattoo.
