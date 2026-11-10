@@ -76,6 +76,25 @@ input[aria-invalid="true"],textarea[aria-invalid="true"]{border-color:#F03B1F !i
 @media (max-width: 640px){.gh-artists a:not(.gh-btn){display:inline-flex;align-items:center;min-height:44px}}
 @media (max-width: 900px){a[href*="instagram.com"]:not(.gh-btn){display:inline-flex;align-items:center;min-height:44px}}
 
+/* The work (homepage): a full-width grid of tattoos and hair, each with its artist's name */
+.gh-work{border-top:1px solid #1C4A46}
+.gh-work__head{max-width:1280px;margin:0 auto;padding:96px 40px 48px;display:flex;flex-wrap:wrap;justify-content:space-between;align-items:flex-end;gap:24px 48px}
+.gh-work__intro{display:flex;flex-direction:column;gap:14px;max-width:640px}
+.gh-work__h{margin:0;font-family:Italiana,Georgia,serif;font-weight:400;font-size:52px;line-height:1.05}
+.gh-work__p{margin:0;font-size:17px;line-height:28px;color:#393536}
+.gh-work__grid{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(4,minmax(0,1fr))}
+.gh-work__grid li{position:relative;aspect-ratio:1 / 1;overflow:hidden;background:#E0E0E0}
+.gh-work__grid img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .6s cubic-bezier(.16,1,.3,1)}
+.gh-work__grid li:hover img{transform:scale(1.03)}
+.gh-work__who{position:absolute;left:12px;bottom:12px;padding:7px 10px;background:#F2F0ED;color:#1C4A46;font-family:Barlow,Arial,sans-serif;font-weight:600;font-size:13px;line-height:1;letter-spacing:.14em;text-transform:uppercase}
+@media (max-width: 640px){
+  .gh-work__head{padding:72px 40px 32px}
+  .gh-work__head .gh-btn{flex:1 1 auto}
+  .gh-work__grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .gh-work__who{left:8px;bottom:8px}
+}
+@media (prefers-reduced-motion: reduce){.gh-work__grid img{transition:none}}
+
 /* Visit section (homepage): the address set large on blush, details in ruled rows beside it */
 .gh-visit{background:#ECCCC4;color:#1C4A46}
 .gh-visit :focus-visible{outline-color:#1C4A46}
