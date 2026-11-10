@@ -75,3 +75,29 @@ input[aria-invalid="true"],textarea[aria-invalid="true"]{border-color:#F03B1F !i
 /* Card text links get a full-size tap area on phones */
 @media (max-width: 640px){.gh-artists a:not(.gh-btn){display:inline-flex;align-items:center;min-height:44px}}
 @media (max-width: 900px){a[href*="instagram.com"]:not(.gh-btn){display:inline-flex;align-items:center;min-height:44px}}
+
+/* Visit section (homepage): the address set large on blush, details in ruled rows beside it */
+.gh-visit{background:#ECCCC4;color:#1C4A46}
+.gh-visit :focus-visible{outline-color:#1C4A46}
+.gh-visit__in{max-width:1280px;margin:0 auto;padding:96px 40px;display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);gap:48px 96px;align-items:start}
+.gh-visit__label{margin:0;font-family:Barlow,Arial,sans-serif;font-weight:600;font-size:13px;letter-spacing:.16em;text-transform:uppercase}
+.gh-visit__addr{margin:18px 0 0;font-family:Italiana,Georgia,serif;font-weight:400;font-size:clamp(44px,5vw,64px);line-height:1}
+.gh-visit__area{margin:14px 0 0;font-family:Italiana,Georgia,serif;font-size:28px;line-height:1.2}
+.gh-visit__btns{display:flex;flex-wrap:wrap;gap:12px;margin-top:36px}
+.gh-visit__list{margin:0;border-bottom:1px solid #1C4A46}
+.gh-visit__row{display:grid;grid-template-columns:140px minmax(0,1fr);gap:16px;padding:9px 0;border-top:1px solid #1C4A46}
+.gh-visit__row dt,.gh-visit__row dd{display:flex;align-items:center;min-height:44px}
+.gh-visit__row dt{font-family:Barlow,Arial,sans-serif;font-weight:600;font-size:13px;letter-spacing:.14em;text-transform:uppercase}
+.gh-visit__row dd{margin:0;font-size:17px;line-height:26px;color:#393536}
+.gh-visit__row dd a{display:inline-flex;align-items:center;min-height:44px;color:#1C4A46;text-decoration-thickness:1px;text-underline-offset:4px}
+.gh-visit__row dd a:hover{color:#393536}
+@media (max-width: 900px){
+  .gh-visit__in{grid-template-columns:1fr;padding:72px 40px}
+  .gh-visit__btns .gh-btn--outline{display:none !important} /* the phone bar already has Text the shop */
+}
+@media (max-width: 640px){
+  .gh-visit__area{font-size:24px}
+  .gh-visit__btns .gh-btn{flex:1 1 auto}
+  .gh-visit__row{grid-template-columns:1fr;gap:0;padding:12px 0}
+  .gh-visit__row dt{min-height:0}
+}
