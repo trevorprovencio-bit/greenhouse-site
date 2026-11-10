@@ -19,6 +19,8 @@
 <link rel="stylesheet" href="css/site.css">
 <link rel="stylesheet" href="css/booking.css">
 <script src="js/booking.js" defer></script>
+<script>document.documentElement.classList.add("gh-intro");setTimeout(function(){var r=document.documentElement;r.classList.add("gh-intro-go");setTimeout(function(){r.classList.add("gh-intro-done")},1800)},2500)</script>
+<script src="js/intro.js" defer></script>
 <style>
 @media (max-width: 900px){.gh-nav{display:none !important}.gh-menu{display:block !important}.gh-mbar{display:flex !important}}
 @keyframes gh-marquee{from{transform:translateX(0)}to{transform:translateX(-50%)}}
@@ -43,7 +45,7 @@ a:focus-visible,button:focus-visible,summary:focus-visible,input:focus-visible{o
 <a class="gh-skip" href="#main">Skip to content</a>
 <div style="background: #F2F0ED; color: #1C4A46; font-family: Arimo, Arial, sans-serif; font-size: 16px; line-height: 26px">
 
-<header style="position: relative; border-bottom: 1px solid #1C4A46">
+<header data-appear="up" style="--d: 0ms; position: relative; border-bottom: 1px solid #1C4A46">
 <div style="max-width: 1280px; margin: 0 auto; padding: 0 40px; height: 84px; display: grid; grid-template-columns: 1fr auto 1fr; align-items: center; gap: 16px">
 <div style="justify-self: start; display: flex; align-items: center">
 <nav aria-label="Services" class="gh-nav" style="display: flex; align-items: center; gap: 28px"><a href="tattoo.html" style="display: inline-flex; align-items: center; min-height: 44px; font-family: Barlow, Arial, sans-serif; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; font-size: 13px; text-decoration: none">Tattoo</a><a href="hair.html" style="display: inline-flex; align-items: center; min-height: 44px; font-family: Barlow, Arial, sans-serif; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; font-size: 13px; text-decoration: none">Hair</a><a href="academy.html" style="display: inline-flex; align-items: center; min-height: 44px; font-family: Barlow, Arial, sans-serif; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; font-size: 13px; text-decoration: none">Academy</a></nav>
@@ -60,26 +62,26 @@ a:focus-visible,button:focus-visible,summary:focus-visible,input:focus-visible{o
 <main id="main">
 <section style="border-bottom: 1px solid #1C4A46">
 <div style="max-width: 1100px; margin: 0 auto; padding: 52px 40px 48px; display: flex; flex-direction: column; align-items: center; gap: 14px; text-align: center">
-<p style="margin: 0; font-family: Barlow, Arial, sans-serif; font-weight: 600; font-size: 13px; letter-spacing: 0.16em; text-transform: uppercase">15 Zillicoa St · Montford · Asheville</p>
-<h1 style="margin: 0; font-family: Italiana, Georgia, serif; font-weight: 400; font-size: clamp(40px, 5vw, 66px); line-height: 1.02">Tattoo, hair and art in a little Asheville greenhouse.</h1>
+<p data-appear="up" style="--d: 60ms; margin: 0; font-family: Barlow, Arial, sans-serif; font-weight: 600; font-size: 13px; letter-spacing: 0.16em; text-transform: uppercase">15 Zillicoa St · Montford · Asheville</p>
+<h1 data-appear="up" data-appear-lines style="--d: 110ms; margin: 0; font-family: Italiana, Georgia, serif; font-weight: 400; font-size: clamp(40px, 5vw, 66px); line-height: 1.02">Tattoo, hair and art in a little Asheville greenhouse.</h1>
 </div>
 </section>
 
-<section style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 420px), 1fr)); border-bottom: 1px solid #1C4A46">
+<section class="gh-split" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 420px), 1fr)); border-bottom: 1px solid #1C4A46">
 <div style="display: flex; flex-direction: column; border-right: 1px solid #1C4A46">
-<img src="images/dre-donoghue.jpg" alt="Dre Donoghue in the salon" style="width: 100%; height: 600px; object-fit: cover; display: block">
+<img data-appear="photo" src="images/dre-donoghue.jpg" alt="Dre Donoghue in the salon" style="--d: 220ms; width: 100%; height: 600px; object-fit: cover; display: block">
 <div style="padding: 36px 32px 44px; display: flex; flex-direction: column; align-items: center; gap: 14px; text-align: center">
-<p style="margin: 0; font-family: Barlow, Arial, sans-serif; font-weight: 600; font-size: 13px; letter-spacing: 0.16em; text-transform: uppercase">Hair by Greenhouse</p>
-<h2 style="margin: 0; font-family: Italiana, Georgia, serif; font-weight: 400; font-size: 44px; line-height: 1.1">Cuts, color and curls</h2>
-<a class="gh-btn gh-btn--primary" href="book.html" style="display: inline-flex; align-items: center; justify-content: center; min-height: 48px; padding: 0 24px; box-sizing: border-box; font-family: Barlow, Arial, sans-serif; font-weight: 600; font-size: 13px; letter-spacing: 0.14em; text-transform: uppercase; text-decoration: none; white-space: nowrap; cursor: pointer; background: #1C4A46; color: #FFFFFF; border: 1.5px solid #1C4A46" data-book="hair">Book hair</a>
+<p data-appear="up" style="--d: 320ms; margin: 0; font-family: Barlow, Arial, sans-serif; font-weight: 600; font-size: 13px; letter-spacing: 0.16em; text-transform: uppercase">Hair by Greenhouse</p>
+<h2 data-appear="up" style="--d: 370ms; margin: 0; font-family: Italiana, Georgia, serif; font-weight: 400; font-size: 44px; line-height: 1.1">Cuts, color and curls</h2>
+<a data-appear="up" class="gh-btn gh-btn--primary" href="book.html" style="--d: 420ms; display: inline-flex; align-items: center; justify-content: center; min-height: 48px; padding: 0 24px; box-sizing: border-box; font-family: Barlow, Arial, sans-serif; font-weight: 600; font-size: 13px; letter-spacing: 0.14em; text-transform: uppercase; text-decoration: none; white-space: nowrap; cursor: pointer; background: #1C4A46; color: #FFFFFF; border: 1.5px solid #1C4A46" data-book="hair">Book hair</a>
 </div>
 </div>
 <div style="display: flex; flex-direction: column">
-<img src="images/chuck-donoghue.jpg" alt="Chuck Donoghue at work" style="width: 100%; height: 600px; object-fit: cover; display: block">
+<img data-appear="photo" src="images/chuck-donoghue.jpg" alt="Chuck Donoghue at work" style="--d: 270ms; width: 100%; height: 600px; object-fit: cover; display: block">
 <div style="padding: 36px 32px 44px; display: flex; flex-direction: column; align-items: center; gap: 14px; text-align: center">
-<p style="margin: 0; font-family: Barlow, Arial, sans-serif; font-weight: 600; font-size: 13px; letter-spacing: 0.16em; text-transform: uppercase">Tattoo by Greenhouse</p>
-<h2 style="margin: 0; font-family: Italiana, Georgia, serif; font-weight: 400; font-size: 44px; line-height: 1.1">Traditional and custom</h2>
-<a class="gh-btn gh-btn--primary" href="book.html" style="display: inline-flex; align-items: center; justify-content: center; min-height: 48px; padding: 0 24px; box-sizing: border-box; font-family: Barlow, Arial, sans-serif; font-weight: 600; font-size: 13px; letter-spacing: 0.14em; text-transform: uppercase; text-decoration: none; white-space: nowrap; cursor: pointer; background: #1C4A46; color: #FFFFFF; border: 1.5px solid #1C4A46" data-book="tattoo">Book a tattoo</a>
+<p data-appear="up" style="--d: 350ms; margin: 0; font-family: Barlow, Arial, sans-serif; font-weight: 600; font-size: 13px; letter-spacing: 0.16em; text-transform: uppercase">Tattoo by Greenhouse</p>
+<h2 data-appear="up" style="--d: 400ms; margin: 0; font-family: Italiana, Georgia, serif; font-weight: 400; font-size: 44px; line-height: 1.1">Traditional and custom</h2>
+<a data-appear="up" class="gh-btn gh-btn--primary" href="book.html" style="--d: 450ms; display: inline-flex; align-items: center; justify-content: center; min-height: 48px; padding: 0 24px; box-sizing: border-box; font-family: Barlow, Arial, sans-serif; font-weight: 600; font-size: 13px; letter-spacing: 0.14em; text-transform: uppercase; text-decoration: none; white-space: nowrap; cursor: pointer; background: #1C4A46; color: #FFFFFF; border: 1.5px solid #1C4A46" data-book="tattoo">Book a tattoo</a>
 </div>
 </div>
 </section>
@@ -467,7 +469,7 @@ a:focus-visible,button:focus-visible,summary:focus-visible,input:focus-visible{o
 </div>
 </div>
 </footer>
-<div class="gh-mbar gh-dark" style="display: none; position: sticky; bottom: 0; z-index: 30; gap: 8px; padding: 10px 16px calc(10px + env(safe-area-inset-bottom)); background: #1C4A46; border-top: 1px solid rgba(255, 255, 255, 0.25)">
+<div data-appear="up" class="gh-mbar gh-dark" style="--d: 480ms; display: none; position: sticky; bottom: 0; z-index: 30; gap: 8px; padding: 10px 16px calc(10px + env(safe-area-inset-bottom)); background: #1C4A46; border-top: 1px solid rgba(255, 255, 255, 0.25)">
 <a class="gh-btn gh-btn--lime" href="book.html" style="display: inline-flex; align-items: center; justify-content: center; min-height: 48px; padding: 0 24px; box-sizing: border-box; font-family: Barlow, Arial, sans-serif; font-weight: 600; font-size: 13px; letter-spacing: 0.14em; text-transform: uppercase; text-decoration: none; white-space: nowrap; cursor: pointer; background: #7FCB2B; color: #393536; border: 1.5px solid #7FCB2B; flex: 1 1 0" data-book="">Book</a>
 <a class="gh-btn gh-btn--outline-light" href="sms:+18286069873" style="display: inline-flex; align-items: center; justify-content: center; min-height: 48px; padding: 0 24px; box-sizing: border-box; font-family: Barlow, Arial, sans-serif; font-weight: 600; font-size: 13px; letter-spacing: 0.14em; text-transform: uppercase; text-decoration: none; white-space: nowrap; cursor: pointer; background: transparent; color: #FFFFFF; border: 1.5px solid #FFFFFF; flex: 1 1 0">Text the shop</a>
 </div>

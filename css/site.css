@@ -76,6 +76,22 @@ input[aria-invalid="true"],textarea[aria-invalid="true"]{border-color:#F03B1F !i
 @media (max-width: 640px){.gh-artists a:not(.gh-btn){display:inline-flex;align-items:center;min-height:44px}}
 @media (max-width: 900px){a[href*="instagram.com"]:not(.gh-btn){display:inline-flex;align-items:center;min-height:44px}}
 
+/* First-screen appear (homepage). Only runs on a page that sets html.gh-intro in its head.
+   The page opens plain; each [data-appear] element rises 6px and sharpens from a 2px blur, at its own --d delay.
+   Photos resolve from a 14px blur instead. js/intro.js starts it (gh-intro-go) once fonts are ready and
+   ends it (gh-intro-done), which hands every element back to its normal styles. */
+@media (prefers-reduced-motion: no-preference){
+  .gh-intro:not(.gh-intro-done) [data-appear]{opacity:0}
+  .gh-intro-go:not(.gh-intro-done) [data-appear]{animation:gh-rise .8s cubic-bezier(.16,1,.3,1) var(--d,0ms) both,gh-fade .6s cubic-bezier(.33,1,.68,1) var(--d,0ms) both}
+  .gh-intro-go:not(.gh-intro-done) [data-appear="photo"]{animation:gh-photo 1s cubic-bezier(.33,1,.68,1) var(--d,0ms) both,gh-fade .7s cubic-bezier(.33,1,.68,1) var(--d,0ms) both}
+}
+@keyframes gh-rise{from{transform:translateY(6px);filter:blur(2px)}to{transform:none;filter:none}}
+@keyframes gh-fade{from{opacity:0}to{opacity:1}}
+@keyframes gh-photo{from{filter:blur(14px) saturate(.6)}to{filter:none}}
+.gh-line{display:block}
+.gh-split > div{overflow:hidden} /* keeps the photo blur inside each half */
+.gh-split img{background:#E0E0E0} /* a placeholder if a photo is still loading */
+
 /* The work (homepage): a full-width grid of tattoos and hair, each with its artist's name */
 .gh-work{border-top:1px solid #1C4A46}
 .gh-work__head{max-width:1280px;margin:0 auto;padding:96px 40px 48px;display:flex;flex-wrap:wrap;justify-content:space-between;align-items:flex-end;gap:24px 48px}
